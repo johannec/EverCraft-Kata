@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.edb.finance</groupId>
+    <artifactId>parent-pom</artifactId>
+    <version>5.0.111</version>
+  </parent>
+
+  <groupId>com.johannec.</groupId>
+  <artifactId>Evercraft-kata</artifactId>
+  <version>0.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>${project.artifactId}</name>
+
+  <prerequisites>
+    <maven>3.0</maven>
+  </prerequisites>
+
+  <modules>
+  </modules>
+
+
+  <properties>
+    <maven.compiler.release>${project.build.java.target}</maven.compiler.release>
+    <project.build.java.target>11</project.build.java.target>
+    <!-- these three are required to get an aggregated result-file produced by jacoco and read by sonar: -->
+    <jacoco.ut.execution.data.file>${project.basedir}/../target/jacoco.exec</jacoco.ut.execution.data.file>
+    <jacoco.it.execution.data.file>${project.basedir}/../target/jacoco-it.exec</jacoco.it.execution.data.file>
+    <junit.jupiter.version>5.8.1</junit.jupiter.version>
+    <junit.platform.version>1.8.1</junit.platform.version>
+  </properties>
+
+    <dependencies>
+      <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+  <dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>${junit.jupiter.version}</version>
+    <scope>test</scope>
+  </dependency>
+  <dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-params</artifactId>
+    <version>${junit.jupiter.version}</version>
+    <scope>test</scope>
+  </dependency>
+  <dependency>
+    <groupId>org.junit.platform</groupId>
+    <artifactId>junit-platform-suite</artifactId>
+    <version>${junit.platform.version}</version>
+    <scope>test</scope>
+  </dependency>
+     </dependencies>
+
+  <build>
+      <plugins>
+    </plugins>
+  </build>
+</project>
