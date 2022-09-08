@@ -1,4 +1,4 @@
-package com.johannec.characters;
+package java.com.johannec.characters;
 
 public class Character {
     private String name;

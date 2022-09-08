@@ -1,4 +1,4 @@
-package com.johannec.characters;
+package java.com.johannec.characters;
 
 import org.junit.Before;
 import org.junit.Test;
